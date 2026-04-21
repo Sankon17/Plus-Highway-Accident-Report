@@ -1,0 +1,220 @@
+   
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+        --plus-green: #009e60;
+        --plus-dark-green: #2e8b57;
+        --bg-color: #f1f3f4;
+        --text-dark: #222;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Space Mono', monospace;
+        background-color: var(--bg-color);
+        color: var(--text-dark);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    
+    header {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        position: relative;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background-color: #eef2f6;
+        z-index: 0;
+        border-bottom-left-radius: 20px;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .logo img {
+        height: 80px;
+        width: auto;
+        padding-right: 20px;
+    }
+
+    .header-controls {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .lang-search {
+        font-family: 'Roboto',
+            sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .plusline-btn {
+        background: linear-gradient(90deg, #4caf77, #2e8b57);
+        color: white;
+        padding: 5px 20px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        line-height: 1.2;
+        border: 2px solid #2e8b57;
+        cursor: pointer;
+    }
+
+     /* Navigation button */ 
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+        flex-shrink: 0;
+    }
+
+    .nav-btn {
+        background-color: #388e3c;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-family: 'Space Mono', monospace;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        min-width: 120px;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+        background-color: #2e7d32;
+    }
+
+    .nav-btn.active {
+        background-color: #1b4f3e;
+        transform: scale(1.05);
+        border: 2px solid white;
+    }
+
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    
+        gap: 20px;
+        padding: 0 40px 20px 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        height: calc(100vh - 190px);
+    }
+
+    .scrollable-content {
+        flex: 1;
+        overflow-y: auto;
+        padding-right: 10px;
+        
+    }
+
+    
+    .scrollable-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .scrollable-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .scrollable-content::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    
+    .welcome-section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        border-left: 5px solid var(--plus-green);
+    }
+
+    .welcome-section h2 {
+        margin-top: 0;
+        color: var(--plus-green);
+    }
+
+    .dashboard-grid { 
+        display: flex;
+        gap: 20px;
+    }
+
+    .info-card,
+    .latest-accidents {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-card {
+        flex: 1;
+    }
+
+    .latest-accidents {
+        flex: 2;
+    }
+
+    .accident-item {
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #eee;
+    }
+
+    .tag {
+        background: #222;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+    }
