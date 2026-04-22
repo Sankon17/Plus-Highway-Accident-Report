@@ -6,7 +6,6 @@ A web-based system designed to record and manage highway accident reports.
 * Secure admin login system.
 * Form to submit new accident reports.
 * Search functionality to find past reports.
-* (Add any other cool features your system has here!)
 
 ## Technologies Used
 * **Frontend:** HTML, CSS
@@ -24,6 +23,5 @@ To run this project on your own machine, follow these steps:
 4. **Run the App:** Open your browser and navigate to `http://localhost/Plus-Highway-Accident-Report/` (or whatever you named the folder in `htdocs`).
 
 ## Default Admin Credentials
-*(Optional: If someone needs to log in to test it, provide dummy login details here)*
 * **Username:** admin
 * **Password:** password123
