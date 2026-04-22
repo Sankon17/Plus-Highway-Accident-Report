@@ -1,0 +1,117 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f2f5;
+    }
+
+    .login-card {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        border-top: 5px solid #009e60;
+        
+    }
+
+    .logo-img {
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .badge {
+        background: #333;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        background: #f9f9f9;
+    }
+
+    input:focus {
+        border-color: #009e60;
+        background: white;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 12px;
+        background-color: #009e60;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .btn-login:hover {
+        background-color: #007a4a;
+    }
+
+    .error-msg {
+        color: #d32f2f;
+        background: #ffebee;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+
+    .back-link {
+        margin-top: 20px;
+        display: block;
+        font-size: 13px;
+        color: #666;
+        text-decoration: none;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }

@@ -1,0 +1,295 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+        --plus-green: #009e60;
+        --bg-color: #f1f3f4;
+        --text-dark: #222;
+        --status-pending: #e69c24;
+        --status-reviewing: #4a86e8;
+        --status-verified: #4caf77;
+        --status-rejected: #d32f2f;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Space Mono', monospace;
+        background-color: var(--bg-color);
+        color: var(--text-dark);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+
+    header {
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        height: 100px;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background: #eef2f6;
+        z-index: 0;
+        border-bottom-left-radius: 20px;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .logo img {
+        height: 80px;
+        width: auto;
+        padding-right: 20px;
+    }
+
+    .header-controls {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .lang-search {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .plusline-btn {
+        background: linear-gradient(90deg, #4caf77, #2e8b57);
+        color: white;
+        padding: 5px 20px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        line-height: 1.2;
+        border: 2px solid #2e8b57;
+        cursor: pointer;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+        flex-shrink: 0;
+    }
+
+    .nav-btn {
+        background: #388e3c;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-family: 'Space Mono';
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        min-width: 120px;
+    }
+
+    .nav-btn:hover {
+        background: #2e7d32;
+    }
+
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px 20px 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        height: calc(100vh - 190px);
+    }
+
+    .page-title {
+        margin-top: 0;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    
+    .status-tabs {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .tab {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .tab:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+        transition: 0.2s;
+    }
+
+    .tab.all {
+        background-color: #ccc;
+        color: #333;
+    }
+
+    .tab.pending {
+        background-color: var(--status-pending);
+    }
+
+   
+    .tab.reviewing {
+        background-color: var(--status-reviewing);
+    }
+
+    .tab.verified {
+        background-color: var(--status-verified);
+    }
+
+    .tab.rejected {
+        background-color: var(--status-rejected);
+    }
+
+    
+    .report-list {
+        flex: 1;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .report-list::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .report-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .report-list::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    
+    .report-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        margin-bottom: 15px;
+        display: flex;
+        overflow: hidden;
+        border: 1px solid #eee;
+    }
+
+    .card-content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .card-id {
+        font-size: 12px;
+        color: #aaa;
+    }
+
+    .card-location {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .card-detail {
+        font-size: 13px;
+        color: #444;
+    }
+
+    .priority-high {
+        color: red;
+        font-weight: bold;
+    }
+
+    .priority-normal {
+        color: green;
+        font-weight: bold;
+    }
+
+    .priority-low {
+        color: gray;
+        font-weight: bold;
+    }
+
+    
+    .status-bar {
+        width: 40px;
+    }
+
+   
+    .status-Pending {
+        background-color: var(--status-pending);
+    }
+
+    
+    .status-Reviewing {
+        background-color: var(--status-reviewing);
+    }
+
+    .status-Reviewed {
+        background-color: var(--status-verified);
+    }
+
+    .status-Rejected {
+        background-color: var(--status-rejected);
+    }
+
+    .no-data {
+        text-align: center;
+        color: #888;
+        margin-top: 50px;
+        font-style: italic;
+    }
