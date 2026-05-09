@@ -24,4 +24,4 @@ To run this project on your own machine, follow these steps:
 
 ## Default Admin Credentials
 * **Username:** admin
-* **Password:** password123
+* **Password:** 123
